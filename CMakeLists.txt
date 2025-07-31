@@ -21,3 +21,8 @@ target_include_directories(wl_greeter PRIVATE ${PAM_INCLUDE_DIRS} ${SYSTEMD_INCL
 
 target_link_libraries(wl_greeter PRIVATE Qt6::Core Qt6::Gui Qt6::Widgets Qt6::Svg ${PAM_LIBRARIES} ${SYSTEMD_LIBRARIES})
 target_compile_options(wl_greeter PRIVATE ${SYSTEMD_CFLAGS_OTHER})
+
+# Install the wl_greeter binary into /usr/local/bin by default
+install(TARGETS wl_greeter
+    RUNTIME DESTINATION bin
+)

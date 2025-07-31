@@ -22,6 +22,7 @@
 #include <security/pam_appl.h>
 #include <string.h>
 #include <pwd.h>
+#include <unistd.h>
 
 #include <systemd/sd-bus.h>
 
